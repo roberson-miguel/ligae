@@ -1,0 +1,11 @@
+<p> Exibindo Tarifa selecionada </p>
+<ul>
+ 
+    <p> Origem: <%= @tax.ddd_origin%> - Destino: <%= @tax.ddd_destiny%> - R$ Minuto: <%= @tax.price_plan%> - Plano: <%= @tax.name_plan%> - R$ Min Excedente: <%= @tax.price_surplus%>  <br>
+     
+</ul>
+
+<%= link_to 'Simulação', root_path %>
+<br>
+<br>
+<%= link_to 'Voltar', root_path %>

@@ -1,0 +1,14 @@
+<p> Cadastro de Tarifas e Planos </p>
+<%= form_for(@tax) do |f| %>
+  <%= f.label :ddd_origin %>
+  <%= f.text_field :ddd_origin %>
+  <%= f.label :ddd_destiny%>
+  <%= f.text_field :ddd_destiny %>
+  <%= f.label :amount_min %>
+  <%= f.text_field :amount_min %>
+  <%= f.label :price_plan %>
+  <%= f.text_field :price_plan %>
+  <%= f.label :name_plan %>
+  <%= f.text_field :name_plan %>
+  <%= f.submit 'Confirmar registro'%>
+<% end %>

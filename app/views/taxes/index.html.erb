@@ -1,0 +1,13 @@
+<p> Exibindo Tarifas e Planos Vigentes</p>
+<ul>
+    <% if @taxes.empty? %>
+        <p> Não existem planos cadastrados</p>
+    <% end %>
+
+    <% @taxes.each do |tax| %>
+        <p> Origem: <%= tax.ddd_origin%> - Destino: <%= tax.ddd_destiny%> - R$ Minuto: <%= tax.price_plan%> - Plano: <%= tax.name_plan%> - R$ Min Excedente: <%= tax.price_surplus%>  <br>
+    <% end %>    
+    
+</ul>
+
+<%= link_to 'Voltar', root_path %>
