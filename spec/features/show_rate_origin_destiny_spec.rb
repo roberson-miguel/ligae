@@ -1,6 +1,6 @@
 require 'rails_helper'
 feature 'Consult rates' do
-  scenario 'I can consult all current rates ' do
+  scenario 'User can see all current rates ' do
     ddd11 = Ddd.create!(code: 11, state: 'SP')
     ddd16 = Ddd.create!(code: 16, state: 'SP') 
     tax1 = Tax.create!(ddd_origin: ddd11.code, ddd_destiny: ddd16.code, amount_min: 1,
@@ -17,4 +17,5 @@ feature 'Consult rates' do
     expect(page).to have_content("Origem: #{tax3.ddd_origin} - Destino: #{tax3.ddd_destiny} - R$ Minuto: #{tax3.price_plan} - Plano: Fale30mais - R$ Min Excedente: #{tax3.price_surplus}")
     expect(page).to have_link('Voltar')
   end
+
 end
