@@ -1,12 +1,10 @@
 class TaxesController < ApplicationController
-
-  before_action :set_find, only: [:show, :edit, :update, :destroy]
-      
+before_action :set_find, only: %i[show edit update]
   def index
     @taxes = Tax.all
   end
 
-  def show  
+  def show 
   end
 
   def edit
@@ -19,8 +17,7 @@ class TaxesController < ApplicationController
 
   def create
     @tax = Tax.new(tax_params)
-    @tax.price_surplus = @tax.calculate_price_surplus
- 
+    @tax.price_surplus = @tax.calculate_price_surplu
     if @tax.save
       flash[:notice] = 'Plano criado com sucesso'
       redirect_to @tax
@@ -28,7 +25,6 @@ class TaxesController < ApplicationController
       flash[:alert] = 'Erro'
       render :new
     end
-    
   end
 
   def update
@@ -38,10 +34,10 @@ class TaxesController < ApplicationController
       render :edit
     end
   end
-end
 
-private
+  end
 
+  private
   def tax_params
     params.require(:tax).permit(:ddd_origin, :ddd_destiny, :amount_min, :name_plan, :price_plan, :price_surplus)
   end
@@ -49,3 +45,4 @@ private
   def set_find
     @tax = Tax.find(params[:id])
   end
+end
