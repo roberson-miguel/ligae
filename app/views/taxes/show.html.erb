@@ -1,10 +1,26 @@
 <p> Exibindo Tarifa selecionada </p>
-<ul>
- 
-    <p> Origem: <%= @tax.ddd_origin%> - Destino: <%= @tax.ddd_destiny%> - Qtd Minutos: <%= @tax.amount_min %> - R$ Minuto: <%= @tax.price_plan%> - Plano: <%= @tax.name_plan%> - R$ Min Excedente: <%= @tax.price_surplus%>  <br>
-     
-</ul>
 
+	  <table width="100%">
+	    <tr>
+	      <td>Origem:</td>
+	      <td>Destino: </td>
+	      <td>R$ Minuto:</td>
+	      <td>Plano: </td>
+          <td>R$ Min Excedente:</td>
+	    </tr>
+	    <tr>
+	      <td><%=@tax.ddd_origin%></td>
+	      <td><%=@tax.ddd_destiny%></td>
+	      <td><%=@tax.price_plan%></td>
+	      <td><%=@tax.name_plan%></td>
+          <td><%=@tax.price_surplus%></td>
+	    </tr>
+	  </table>
+
+<br>
+<%= link_to 'Editar', edit_tax_path(@tax) %>
+<br>
+<br>
 <%= link_to 'Simulação', root_path %>
 <br>
 <br>

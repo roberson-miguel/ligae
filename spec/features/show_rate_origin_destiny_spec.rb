@@ -13,22 +13,32 @@ feature 'Consult rates' do
                        amount_min: 30, name_plan: 'Fale30mais',
                        price_plan: 2.9, price_surplus: 3.19)
     visit root_path
+
     click_link 'Tarifas e Planos Vigentes'
-    expect(page).to have_content("Origem: #{tax1.ddd_origin} - \
-                                Destino: #{tax1.ddd_destiny} - \
-                                R$ Minuto: #{tax1.price_plan} - \
-                                Plano: normal - \
-                                R$ Min Excedente: #{tax1.price_surplus}")
-    expect(page).to have_content("Origem: #{tax2.ddd_origin} - \
-                                Destino: #{tax2.ddd_destiny} - \
-                                R$ Minuto: #{tax2.price_plan} - \
-                                Plano: normal - \
-                                R$ Min Excedente: #{tax2.price_surplus}")
-    expect(page).to have_content("Origem: #{tax3.ddd_origin} - \
-                                Destino: #{tax3.ddd_destiny} - \
-                                R$ Minuto: #{tax3.price_plan} - \
-                                Plano: Fale30mais - \
-                                R$ Min Excedente: #{tax3.price_surplus}")
-    expect(page).to have_link('Voltar')
+
+    expect(page).to have_content("Criar novas tarifas e planos")
+    expect(page).to have_content("Origem: Destino: R$ Minuto: Plano: R$ Min Excedente: Acão:")
+    
+    expect(page).to have_link("#{tax1.ddd_origin}")
+    expect(page).to have_content("#{tax1.ddd_destiny}")
+    expect(page).to have_content("#{tax1.price_plan}")
+    expect(page).to have_content("normal")
+    expect(page).to have_content("#{tax1.price_surplus}")
+
+    expect(page).to have_link("#{tax2.ddd_origin}")
+    expect(page).to have_content("#{tax2.ddd_destiny}")
+    expect(page).to have_content("#{tax2.price_plan}")
+    expect(page).to have_content("normal")
+    expect(page).to have_content("#{tax2.price_surplus}")
+
+    expect(page).to have_link("#{tax3.ddd_origin}")
+    expect(page).to have_content("#{tax3.ddd_destiny}")
+    expect(page).to have_content("#{tax3.price_plan}")
+    expect(page).to have_content("Fale30mais")
+    expect(page).to have_content("#{tax3.price_surplus}")
+                            
+    expect(page).to have_link('Editar')
+    expect(page).to have_link('Deletar')
+                            
   end
 end

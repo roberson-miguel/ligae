@@ -1,13 +1,29 @@
-<p> Exibindo Tarifas e Planos Vigentes</p>
-<ul>
-    <% if @taxes.empty? %>
-        <p> Não existem planos cadastrados</p>
-    <% end %>
-
-    <% @taxes.each do |tax| %>
-        <p> Origem: <%= tax.ddd_origin%> - Destino: <%= tax.ddd_destiny%> - R$ Minuto: <%= tax.price_plan%> - Plano: <%= tax.name_plan%> - R$ Min Excedente: <%= tax.price_surplus%>  <br>
-    <% end %>    
-    
-</ul>
-
-<%= link_to 'Voltar', root_path %>
+<%= link_to "Criar novas tarifas e planos", new_tax_path %>
+	<%if @taxes.present? %>
+	  <p>Exibindo Tarifas e Planos Vigentes</p>
+	  <table width="100%">
+	    <tr>
+	      <td>Origem:</td>
+	      <td>Destino: </td>
+	      <td>R$ Minuto:</td>
+	      <td>Plano: </td>
+          <td>R$ Min Excedente:</td>
+	      <td>Acão: </td>
+	    </tr>
+	    <%@taxes.each do |tax|%>
+	    <tr>
+	      <td><%= link_to tax[:ddd_origin], tax_path(tax) %></td>
+	      <td><%=tax[:ddd_destiny]%></td>
+	      <td><%=tax[:price_plan]%></td>
+	      <td><%=tax[:name_plan]%></td>
+          <td><%=tax[:price_surplus]%></td>
+	      <td>
+	        <%= link_to "Editar", edit_tax_path(tax[:id]) %> | 
+	        <%= link_to "Deletar", tax_path(tax[:id]), :method => :delete %>
+	      </td>
+	    </tr>
+	   <%end%>
+	  </table>
+	<%else%>
+	  <p>Não existem planos cadastrados</p>
+	<%end%>

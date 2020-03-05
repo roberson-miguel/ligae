@@ -10,12 +10,17 @@ feature 'Register a rates' do
     click_button 'Confirmar registro'
     expect(page).to have_content('Plano criado com sucesso')
     expect(page).to have_content('Exibindo Tarifa selecionada')
-    expect(page).to have_content('Origem: 11 - Destino: 16 - Qtd Minutos: 1\
-                                - R$ Minuto: 1.9 - Plano: normal - \
-                                  R$ Min Excedente: 1.9')
+    expect(page).to have_content("11")
+    expect(page).to have_content("16")
+    expect(page).to have_content("1")
+    expect(page).to have_content("1.9")
+    expect(page).to have_content("normal")
+    expect(page).to have_content("1.9")
+    expect(page).to have_link('Editar')
     expect(page).to have_link('Simulação')
     expect(page).to have_link('Voltar')
   end
+
   scenario 'Admin can register a plan Fale30mais' do
     visit new_tax_path
     fill_in 'Ddd origin', with: 11
@@ -26,9 +31,13 @@ feature 'Register a rates' do
     click_button 'Confirmar registro'
     expect(page).to have_content('Plano criado com sucesso')
     expect(page).to have_content('Exibindo Tarifa selecionada')
-    expect(page).to have_content('Origem: 11 - Destino: 16 - Qtd Minutos: 30 \
-                                - R$ Minuto: 1.9 - Plano: Fale30mais - \
-                                R$ Min Excedente: 2.09')
+    expect(page).to have_content("11")
+    expect(page).to have_content("16")
+    expect(page).to have_content("30")
+    expect(page).to have_content("1.9")
+    expect(page).to have_content("Fale30mais")
+    expect(page).to have_content("2.09")
+    expect(page).to have_link('Editar')
     expect(page).to have_link('Simulação')
     expect(page).to have_link('Voltar')
   end
