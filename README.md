@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Manual para instalação do webpack 
+* https://www.vic-l.com/setup-bootstrap-in-rails-6-with-webpacker-for-development-and-production/

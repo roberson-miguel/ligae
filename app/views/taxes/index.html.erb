@@ -1,14 +1,15 @@
 <%= link_to "Criar novas tarifas e planos", new_tax_path %>
 	<%if @taxes.present? %>
 	  <p>Exibindo Tarifas e Planos Vigentes</p>
-	  <table width="100%">
+	  <!-- table width="100%" -->
+		<table class="table table-hover">
 	    <tr>
-	      <td>Origem:</td>
-	      <td>Destino: </td>
-	      <td>R$ Minuto:</td>
-	      <td>Plano: </td>
-          <td>R$ Min Excedente:</td>
-	      <td>Acão: </td>
+	      <td scope="col">Origem:</td>
+	      <td scope="col">Destino: </td>
+	      <td scope="col">R$ Minuto:</td>
+	      <td scope="col">Plano: </td>
+        <td scope="col">R$ Min Excedente:</td>
+	      <td scope="col">Acão: </td>
 	    </tr>
 	    <%@taxes.each do |tax|%>
 	    <tr>
