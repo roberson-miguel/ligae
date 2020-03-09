@@ -1,0 +1,13 @@
+<p> Simulação de Tarifas e Planos </p>
+
+<%= form_for(@simulation) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :phone%>
+  <%= f.text_field :phone %>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <%= f.label :amount_user %>
+  <%= f.text_field :amount_user %>
+  <%= f.submit 'Confirmar registro'%>
+<% end %>

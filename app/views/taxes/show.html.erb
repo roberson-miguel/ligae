@@ -6,22 +6,18 @@
 	      <td>Destino: </td>
 	      <td>R$ Minuto:</td>
 	      <td>Plano: </td>
-          <td>R$ Min Excedente:</td>
+        <td>R$ Min Excedente:</td>
 	    </tr>
 	    <tr>
 	      <td><%=@tax.ddd_origin%></td>
 	      <td><%=@tax.ddd_destiny%></td>
 	      <td><%=@tax.price_plan%></td>
 	      <td><%=@tax.name_plan%></td>
-          <td><%=@tax.price_surplus%></td>
+        <td><%=@tax.price_surplus%></td>
 	    </tr>
 	  </table>
-
 <br>
-<%= link_to 'Editar', edit_tax_path(@tax) %>
-<br>
-<br>
-<%= link_to 'Simulação', root_path %>
+<%= link_to 'Simulação', new_simulation_path %>
 <br>
 <br>
 <%= link_to 'Voltar', root_path %>

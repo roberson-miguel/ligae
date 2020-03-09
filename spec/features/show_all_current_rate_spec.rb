@@ -19,22 +19,22 @@ feature 'Consult rates' do
     expect(page).to have_content("Criar novas tarifas e planos")
     expect(page).to have_content("Origem: Destino: R$ Minuto: Plano: R$ Min Excedente: Acão:")
     
-    expect(page).to have_link("#{tax1.ddd_origin}")
+    expect(page).to have_content("#{tax1.ddd_origin}")
     expect(page).to have_content("#{tax1.ddd_destiny}")
     expect(page).to have_content("#{tax1.price_plan}")
-    expect(page).to have_content("normal")
+    expect(page).to have_link("normal")
     expect(page).to have_content("#{tax1.price_surplus}")
 
-    expect(page).to have_link("#{tax2.ddd_origin}")
+    expect(page).to have_content("#{tax2.ddd_origin}")
     expect(page).to have_content("#{tax2.ddd_destiny}")
     expect(page).to have_content("#{tax2.price_plan}")
-    expect(page).to have_content("normal")
+    expect(page).to have_link("normal")
     expect(page).to have_content("#{tax2.price_surplus}")
 
-    expect(page).to have_link("#{tax3.ddd_origin}")
+    expect(page).to have_content("#{tax3.ddd_origin}")
     expect(page).to have_content("#{tax3.ddd_destiny}")
     expect(page).to have_content("#{tax3.price_plan}")
-    expect(page).to have_content("Fale30mais")
+    expect(page).to have_link("Fale30mais")
     expect(page).to have_content("#{tax3.price_surplus}")
                             
     expect(page).to have_link('Editar')

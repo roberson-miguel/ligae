@@ -16,7 +16,6 @@ feature 'Register a rates' do
     expect(page).to have_content("1.9")
     expect(page).to have_content("normal")
     expect(page).to have_content("1.9")
-    expect(page).to have_link('Editar')
     expect(page).to have_link('Simulação')
     expect(page).to have_link('Voltar')
   end
@@ -37,7 +36,6 @@ feature 'Register a rates' do
     expect(page).to have_content("1.9")
     expect(page).to have_content("Fale30mais")
     expect(page).to have_content("2.09")
-    expect(page).to have_link('Editar')
     expect(page).to have_link('Simulação')
     expect(page).to have_link('Voltar')
   end

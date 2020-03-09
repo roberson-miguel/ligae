@@ -13,11 +13,11 @@
 	    </tr>
 	    <%@taxes.each do |tax|%>
 	    <tr>
-	      <td><%= link_to tax[:ddd_origin], tax_path(tax) %></td>
+	      <td><%=tax[:ddd_origin]%></td>
 	      <td><%=tax[:ddd_destiny]%></td>
 	      <td><%=tax[:price_plan]%></td>
-	      <td><%=tax[:name_plan]%></td>
-          <td><%=tax[:price_surplus]%></td>
+	      <td><%= link_to tax[:name_plan], tax_path(tax)%></td>
+        <td><%=tax[:price_surplus]%></td>
 	      <td>
 	        <%= link_to "Editar", edit_tax_path(tax[:id]) %> | 
 	        <%= link_to "Deletar", tax_path(tax[:id]), :method => :delete %>
