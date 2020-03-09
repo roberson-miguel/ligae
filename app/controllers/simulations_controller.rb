@@ -7,7 +7,7 @@ class SimulationsController < ApplicationController
 
   def show
     @taxes = Tax.all
-    @simulation = Simulation.new
+    @simulations = Simulation.all
   end
 
   def create
@@ -27,13 +27,10 @@ class SimulationsController < ApplicationController
     @taxes = Tax.where('ddd_origin like ? AND ddd_destiny like ?', "#{params[:ddd_origin]}", "#{params[:ddd_destiny]}")
   end
 
-
-  private
+ private
 
   def simulation_params
-    params.require(:simulation).permit(:amount_user, :ddd_origin_user, 
-                                      :ddd_destiny_user,:diff_plan, 
-                                      :with_plan, :without_plan)
+    params.require(:simulation).permit(:amount_user, :ddd_origin_user, :ddd_destiny_user, :diff_plan, :with_plan, :without_plan)
   end
 
   def set_find
