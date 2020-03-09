@@ -1,14 +1,24 @@
 class Simulation < ApplicationRecord
 
-  def price_simulation
-    if amount_user <= amount_min
-      @with_plan = 0.0
-      @without_plan = price_plan.to_f * amount_user
+  def calculate_without_plan
+    without_plan = amount_user * 1
+  end
+
+  def calculate_with_plan 
+    if amount_user <= 30
+      with_plan = 0.0
     else
-      @diff_plan = amount_user.to_i - amount_min.to_i
-      @with_plan = diff_plan * price_surplus
-      @without_plan = price_plan * amount_user
+      #calculate_diff_plan
+      with_plan = calculate_diff_plan * 1.1
     end
+  end
+
+  def calculate_diff_plan
+    diff_plan = amount_user - 30 #amount_min
+  end
+
+  def search(search)
+    @taxes = Tax.where('ddd_origin like ? AND ddd_destiny like ?', "%#{params[:ddd_origin_user]}%", "%#{params[:ddd_destiny_user]}%")
   end
 
 end

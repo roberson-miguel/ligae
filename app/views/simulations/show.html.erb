@@ -1,0 +1,24 @@
+<p> Exibindo Simulação Criada </p>
+
+	  <table class="table table-hover">
+	    <tr>
+	      <td>Origem:</td>
+	      <td>Destino: </td>
+	      <td>Qtd Simulada:</td>
+	      <td>Com Plano: </td>
+        <td>Sem Plano:</td>
+	    </tr>
+	    <tr>
+	      <td><%=@simulation.ddd_origin_user%></td>
+	      <td><%=@simulation.ddd_destiny_user%></td>
+	      <td><%=@simulation.amount_user%></td>
+	      <td><%=@simulation.with_plan%></td>
+        <td><%=@simulation.without_plan%></td>
+	    </tr>
+	  </table>
+<br>
+
+<%= link_to 'Nova Simulação', simulation_path %>
+<br>
+<br>
+<%= link_to 'Voltar', root_path %>

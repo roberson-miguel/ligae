@@ -1,0 +1,25 @@
+<p> Pesquisando Planos Disponiveis </p>
+<% if @taxes.empty? %>
+      <p> Não existem planos disponiveis</p>
+<% else %>   
+  <table class="table table-hover">
+    <tr>
+      <td>Origem:</td>
+      <td>Destino: </td>
+      <td>R$ Minuto:</td>
+      <td>Plano: </td>
+      <td>R$ Min Excedente:</td>
+    </tr> 
+    <% @taxes.each do |tax| %>
+      <tr>
+          <td><%=tax.ddd_origin%></td>
+          <td><%=tax.ddd_destiny%></td>
+          <td><%=tax.price_plan%></td>
+          <td><%=tax.name_plan%></td>
+          <td><%=tax.price_surplus%></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+  
+

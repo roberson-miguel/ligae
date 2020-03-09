@@ -1,3 +1,15 @@
 <ul class="nav flex-column">
     <li><%= link_to 'Tarifas e Planos Vigentes', taxes_path %></li> 
+    <li> <%= link_to 'Simulação', new_simulation_path %> <li>
+<br>
+<p> Pesquisa de Planos por Origem e Destino </p>
+<%= form_with url: search_simulations_path, local: true, method: :get do %>
+        <%= label_tag(:ddd_origin, 'ddd origin') %>
+        <%= text_field_tag(:ddd_origin) %>
+        <%= label_tag(:ddd_destiny, 'ddd destiny') %>
+        <%= text_field_tag(:ddd_destiny) %>
+        <%= submit_tag 'Buscar' %>
+<% end %>
+
+
 </ul>

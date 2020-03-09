@@ -1,13 +1,17 @@
-<p> Simulação de Tarifas e Planos </p>
+<p>Simulação de Planos </p>
 
 <%= form_for(@simulation) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :phone%>
-  <%= f.text_field :phone %>
-  <%= f.label :city %>
-  <%= f.text_field :city %>
+  <%= f.label :ddd_origin_user %>
+  <%= f.text_field :ddd_origin_user %>
+  <br>
+  <%= f.label :ddd_destiny_user %>
+  <%= f.text_field :ddd_destiny_user %>
+  <br>
   <%= f.label :amount_user %>
   <%= f.text_field :amount_user %>
-  <%= f.submit 'Confirmar registro'%>
+  <br>
+  <%= f.submit 'Simular Planos'%>
 <% end %>
+
+<br>
+<%= link_to 'Voltar', root_path %>
