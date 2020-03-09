@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_06_163457) do
+ActiveRecord::Schema.define(version: 2020_03_09_125610) do
 
   create_table "ddds", force: :cascade do |t|
     t.integer "code"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 2020_03_06_163457) do
     t.integer "amount_user"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "ddd_origin_user"
+    t.integer "ddd_destiny_user"
+    t.integer "diff_plan"
+    t.float "with_plan"
+    t.float "without_plan"
   end
 
   create_table "taxes", force: :cascade do |t|
