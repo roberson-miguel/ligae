@@ -18,9 +18,15 @@ feature 'Consult rates' do
 
     click_link 'Fale30mais'
 
-    click_link 'Simulação'
+    expect(page).to have_content("Exibindo Tarifa selecionada")
 
-    expect(page).to have_content("Simulação de Tarifas e Planos")
+    expect(page).to have_content("Origem: Destino: R$ Minuto: Plano: R$ Min Excedente:")
+    
+    expect(page).to have_content("#{tax3.ddd_origin}")
+    expect(page).to have_content("#{tax3.ddd_destiny}")
+    expect(page).to have_content("#{tax3.price_plan}")
+    expect(page).to have_content("Fale30mais")
+    expect(page).to have_content("#{tax3.price_surplus}")
                             
   end
 end
