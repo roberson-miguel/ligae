@@ -24,6 +24,7 @@ class SimulationsController < ApplicationController
   end
 
   def search
+    
     @taxes = Tax.where('ddd_origin like ? AND ddd_destiny like ?', "#{params[:ddd_origin]}", "#{params[:ddd_destiny]}")
     
     @taxes.each do |tax|
@@ -35,7 +36,7 @@ class SimulationsController < ApplicationController
       @simulation.without_plan = @simulation.calculate_without_plan
       @simulation.save
     end
-
+  
   end
 
  private

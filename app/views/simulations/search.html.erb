@@ -7,6 +7,7 @@
       <td>Origem:</td>
       <td>Destino: </td>
       <td>R$ Minuto:</td>
+      <td>Qtd Minutos: </td>
       <td>Plano: </td>
       <td>R$ Min Excedente:</td>
     </tr> 
@@ -16,12 +17,38 @@
           <td><%=tax.ddd_origin%></td>
           <td><%=tax.ddd_destiny%></td>
           <td><%=tax.price_plan%></td>
+          <td><%=tax.amount_min%></td>
           <td><%=tax.name_plan%></td>
           <td><%=tax.price_surplus%></td>
           
       </tr>
     <% end %>
+  </table>
 
   
-  </table>
 <% end %>
+
+<table class="table table-hover">
+    <tr>
+      <td>Origem:</td>
+      <td>Destino: </td>
+      <td>Qtd Min Simulada:</td>
+      <td>Plano: </td>
+      <td>Com plano: </td>
+      <td>Sem Plano: </td>
+    </tr> 
+  
+        <tr>
+            <td><%=@simulation.ddd_origin_user%></td>
+            <td><%=@simulation.ddd_destiny_user%></td>
+            <td><%=@simulation.amount_user%></td>
+
+              <% @taxes.each do |tax| %>
+                <td><%=tax.name_plan%></td>
+              <% end %>
+              
+            <td><%=@simulation.with_plan%></td>
+            <td><%=@simulation.without_plan%></td>
+        </tr>
+
+  </table>
