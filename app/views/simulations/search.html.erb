@@ -10,6 +10,7 @@
       <td>Plano: </td>
       <td>R$ Min Excedente:</td>
     </tr> 
+    
     <% @taxes.each do |tax| %>
       <tr>
           <td><%=tax.ddd_origin%></td>
@@ -17,9 +18,10 @@
           <td><%=tax.price_plan%></td>
           <td><%=tax.name_plan%></td>
           <td><%=tax.price_surplus%></td>
+          
       </tr>
     <% end %>
+
+  
   </table>
 <% end %>
-  
-
