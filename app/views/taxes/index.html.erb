@@ -28,3 +28,14 @@
 	<%else%>
 	  <p>Não existem planos cadastrados</p>
 	<%end%>
+
+	<p> Simulação de Planos por Origem e Destino </p>
+	<%= form_with url: search_simulations_path, local: true, method: :get do %>
+        <%= label_tag(:ddd_origin, 'DDD origem') %>
+        <%= text_field_tag(:ddd_origin) %>
+        <%= label_tag(:ddd_destiny, 'DDD Destino') %>
+        <%= text_field_tag(:ddd_destiny) %>
+        <%= label_tag(:amount_user, 'Qtd Minutos') %>
+        <%= text_field_tag(:amount_user) %>
+        <%= submit_tag 'Simular' %>
+	<% end %>
