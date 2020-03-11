@@ -7,7 +7,7 @@
       <td>Origem:</td>
       <td>Destino: </td>
       <td>Qtd Min Simulada:</td>
-      <td>Plano: </td>
+      <td>Planos: </td>
       <td>Com plano: </td>
       <td>Sem Plano: </td>
     </tr> 
@@ -17,9 +17,10 @@
         <td><%=@simulation.ddd_destiny_user%></td>
         <td><%=@simulation.amount_user%></td>
 
-          <% @taxes.each do |tax| %>
-            <td><%=tax.name_plan%></td>
+          <td><% @taxes.each do |tax| %>
+          <%=tax.name_plan%> <br> 
           <% end %>
+          </td>
           
         <td><%=@simulation.with_plan%></td>
         <td><%=@simulation.without_plan%></td>

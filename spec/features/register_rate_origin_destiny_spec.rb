@@ -1,12 +1,12 @@
 require 'rails_helper'
 feature 'Register a rates' do
-  scenario 'Admin can register a plan normal' do
+  scenario 'Admin can register a plan sem plano' do
     visit new_tax_path
     fill_in 'Ddd origin', with: 11
     fill_in 'Ddd destiny', with: 16
     fill_in 'Amount min', with: 1
     fill_in 'Price plan', with: 1.9
-    fill_in 'Name plan', with: 'normal'
+    fill_in 'Name plan', with: 'sem plano'
     click_button 'Confirmar registro'
     expect(page).to have_content('Plano criado com sucesso')
     expect(page).to have_content('Exibindo Tarifa selecionada')
@@ -14,7 +14,7 @@ feature 'Register a rates' do
     expect(page).to have_content("16")
     expect(page).to have_content("1")
     expect(page).to have_content("1.9")
-    expect(page).to have_content("normal")
+    expect(page).to have_content("sem plano")
     expect(page).to have_content("1.9")
     expect(page).to have_link('Voltar')
   end

@@ -37,7 +37,7 @@ feature 'Simulate existing plan' do
 
     expect(page).to have_content('Simulação de Planos Disponiveis')
     
-    expect(page).to have_content("Origem: Destino: Qtd Min Simulada: Plano: Com plano: Sem Plano:")
+    expect(page).to have_content("Origem: Destino: Qtd Min Simulada: Planos: Com plano: Sem Plano:")
     
     expect(page).to have_content("#{sim.ddd_origin_user}")
     expect(page).to have_content("#{sim.ddd_destiny_user}")
@@ -66,7 +66,7 @@ feature 'Simulate existing plan' do
 
     expect(page).to have_content('Simulação de Planos Disponiveis')
     
-    expect(page).to have_content("Origem: Destino: Qtd Min Simulada: Plano: Com plano: Sem Plano:")
+    expect(page).to have_content("Origem: Destino: Qtd Min Simulada: Planos: Com plano: Sem Plano:")
     
     expect(page).to have_content("#{sim.ddd_origin_user}")
     expect(page).to have_content("#{sim.ddd_destiny_user}")
@@ -95,7 +95,7 @@ feature 'Simulate existing plan' do
 
     expect(page).to have_content('Simulação de Planos Disponiveis')
     
-    expect(page).to have_content("Origem: Destino: Qtd Min Simulada: Plano: Com plano: Sem Plano:")
+    expect(page).to have_content("Origem: Destino: Qtd Min Simulada: Planos: Com plano: Sem Plano:")
     
     expect(page).to have_content("#{sim.ddd_origin_user}")
     expect(page).to have_content("#{sim.ddd_destiny_user}")
