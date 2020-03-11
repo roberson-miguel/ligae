@@ -33,8 +33,8 @@ class SimulationsController < ApplicationController
       @simulation.ddd_origin_user = "#{params[:ddd_origin]}"
       @simulation.ddd_destiny_user = "#{params[:ddd_destiny]}"
       @simulation.amount_user = "#{params[:amount_user]}"
-      @simulation.with_plan = @simulation.calculate_with_plan(@tax_amount_min, @tax_price_surplus)
-      @simulation.without_plan = @simulation.calculate_without_plan(@tax_price_plan)
+      @simulation.with_plan = @simulation.calculate_with_plan(@tax_amount_min, @tax_price_surplus, amount_user)
+      @simulation.without_plan = @simulation.calculate_without_plan(@tax_price_plan, amount_user)
       @simulation.save
     end
   end
