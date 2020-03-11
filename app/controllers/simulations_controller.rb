@@ -36,7 +36,7 @@ class SimulationsController < ApplicationController
       @simulation.amount_user = "#{params[:amount_user]}"
       @simulation.with_plan = @simulation.calculate_with_plan(@tax_amount_user, @tax_price_surplus, @tax_amount_min)
       @simulation.without_plan = @simulation.calculate_without_plan(@tax_price_plan, @tax_amount_user)
-      @simulation.save
+      #@simulation.save
     end
   end
 
