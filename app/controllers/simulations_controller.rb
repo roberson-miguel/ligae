@@ -28,13 +28,14 @@ class SimulationsController < ApplicationController
     @taxes.each do |tax|
       @tax_price_plan = tax.price_plan
       @tax_amount_min = tax.amount_min
+      @tax_amount_user = "#{params[:amount_user].to_i}"
       @tax_price_surplus = tax.price_surplus
       @simulation = Simulation.new
       @simulation.ddd_origin_user = "#{params[:ddd_origin]}"
       @simulation.ddd_destiny_user = "#{params[:ddd_destiny]}"
       @simulation.amount_user = "#{params[:amount_user]}"
-      @simulation.with_plan = @simulation.calculate_with_plan(@tax_amount_min, @tax_price_surplus, amount_user)
-      @simulation.without_plan = @simulation.calculate_without_plan(@tax_price_plan, amount_user)
+      @simulation.with_plan = @simulation.calculate_with_plan(@tax_amount_min, @tax_price_surplus, @tax_amount_user)
+      @simulation.without_plan = @simulation.calculate_without_plan(@tax_price_plan, @tax_amount_user)
       @simulation.save
     end
   end
