@@ -1,10 +1,11 @@
 # LIGAE
 
-LIGAE é um projeto teste de aplicação das minhas habilidades pessoais. Não está concluido, aceito todo feedback. Obrigado!
+LIGAE é um projeto de uso das minhas habilidades pessoais. 
+Não está concluido, aceito todo e qualquer feedback. Obrigado!
 
-No projeto quero que um usuaruo de telefonia acesse o nosso site e conheça nossos planos e possa simular se existem planos para suas ligações mais frequentes. 
+No projeto quero que um usuario de telefonia acesse o nosso site e conheça nossos planos, e que o usuário possa simular planos para suas ligações mais frequentes. 
 
-Deixo algumas features já prontas para a evoliução, pois quero além de simular para o cliente em breve fazer analise dos futuros planos já pesquisados, e quem sabe disponibilizar na plataforma!
+Deixo algumas features prontas para a evolução do projeto, exemplo é que capturo os dados das simulações no banco de dados, pois quero em breve fazer analise dos dados e diponibilzar na plataforma!
 
 
 ## Configurações: 
@@ -19,13 +20,12 @@ Deixo algumas features já prontas para a evoliução, pois quero além de simul
 * Seu computador deve ter preferencialmente macOS ou O.S Linux;
 
 * Você pode utilizar o comdando `bin/setup` para configurar o que for necessário ou pode seguir os passos abaixo
-{
+
   * Instale as dependências necessárias  definidas no    arquivo  `GemFile`, rodando o comando `bundle install`. 
 
   * SQLite3 é utilizado nesse projeto e para criar os bancos de dados basta rodar o comando `rails db:migrate`.
-}
 
-* Como uso utilizando o `rails 6`, é preferivel utilizar o comando `yarn install --check-files` para a instalação de algumas dependências.
+* Como estou usando o `rails 6`, é preferivel utilizar o comando `yarn install --check-files` para a instalação de algumas dependências.
 
 * Você já pode utilizar o comando `rails s` para ver a aplicação funcionando no endereço `localhost:3000` mas caso queira algum kit já cadastrado utilize o comando `rake db:seed`.
 
@@ -35,14 +35,15 @@ Deixo algumas features já prontas para a evoliução, pois quero além de simul
 
 ## Algumas Extras
 
-* Para fazer a autenticação foi utilizada a gem `Devise`.
+* *Para fazer a autenticação(ainda não implementada) deixo já configurada a gem `Devise`.
 
 * *Para ajudar com a estilização do site utilizamos o framework `Bootstrap`.
 
-* *Manual para instalação do webpack:  
+* * Manual para instalação do webpack:  
 * * https://www.vic-l.com/setup-bootstrap-in-rails-6-with-webpacker-for-development-and-production/
 
-### Docker
+
+### Para iniciar o Projeto usando Docker
 
 * Requisitos
 
