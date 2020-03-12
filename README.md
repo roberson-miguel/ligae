@@ -41,3 +41,47 @@ Deixo algumas features já prontas para a evoliução, pois quero além de simul
 
 * *Manual para instalação do webpack:  
 * * https://www.vic-l.com/setup-bootstrap-in-rails-6-with-webpacker-for-development-and-production/
+
+### Docker
+
+* Requisitos
+
+ - Docker
+ - Editor
+
+ ### Criando a imagem inicial
+
+
+```
+docker-compose build
+```
+
+* * Entre no container da aplicação
+
+```
+docker-compose run --service-ports web bash
+```
+
+### Instalando Rails e Dependencias na Docker!
+
+```
+gem install rails
+```
+
+```
+bin/setup
+```
+
+```
+yarn install --check-files
+``` 
+
+```
+rails db:seed
+```
+
+```
+rails s -b 0.0.0.0
+```
+
+* * No seu navegador digite http://0.0.0.0:3000/
