@@ -10,4 +10,6 @@ WORKDIR /ligae
 
 ADD . /ligae
 
+RUN gem install rails
+
 RUN bundle install

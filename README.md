@@ -64,13 +64,7 @@ docker-compose run --service-ports web bash
 
 ### Instalando Rails e Dependencias na Docker!
 
-```
-gem install rails
-```
-
-```
-bin/setup
-```
+* * Talvez voce precise de permisão especial utilize: "sudo chown -R $USER:$USER ."
 
 ```
 yarn install --check-files
