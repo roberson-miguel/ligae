@@ -10,4 +10,5 @@ class Tax < ApplicationRecord
       price_surplus = price_plan
     end
   end
+
 end

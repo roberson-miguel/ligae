@@ -11,5 +11,4 @@ class Simulation < ApplicationRecord
       with_plan = (tax_amount_user.to_i - tax_amount_min) * tax_price_surplus
     end
   end
-
 end
