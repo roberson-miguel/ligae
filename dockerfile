@@ -14,4 +14,4 @@ RUN gem install rails
 
 RUN bundle install
 
-RUN yarn install --check-files
+CMD yarn install --check-files

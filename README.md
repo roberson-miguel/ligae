@@ -63,6 +63,9 @@ docker-compose run --service-ports web bash
 
 * * Talvez voce precise de permisão especial utilize: "sudo chown -R $USER:$USER ."
 
+```
+yarn install --check-files
+```
 
 ```
 rails s -b 0.0.0.0
