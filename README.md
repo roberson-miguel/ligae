@@ -50,6 +50,8 @@ Deixo algumas features prontas para a evolução do projeto, exemplo é que capt
  ### Criando a imagem inicial
 
 
+* * Criando imagem da aplicação
+
 ```
 docker-compose build
 ```
@@ -60,12 +62,6 @@ docker-compose build
 docker-compose run --service-ports web bash
 ```
 
-
-* * Talvez voce precise de permisão especial utilize: "sudo chown -R $USER:$USER ."
-
-```
-yarn install --check-files
-```
 
 ```
 rails s -b 0.0.0.0
