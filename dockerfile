@@ -13,3 +13,5 @@ ADD . /ligae
 RUN gem install rails
 
 RUN bundle install
+
+CMD yarn install --check-files

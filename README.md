@@ -42,10 +42,14 @@ Deixo algumas features prontas para a evolução do projeto, exemplo é que capt
 * * Manual para instalação do webpack:  
 * * https://www.vic-l.com/setup-bootstrap-in-rails-6-with-webpacker-for-development-and-production/
 
+<<<<<<< HEAD
 
 ### Para iniciar o Projeto usando Docker
 
 * Requisitos
+=======
+### Docker Requisitos:
+>>>>>>> docker
 
  - Docker
  - Editor
@@ -63,16 +67,11 @@ docker-compose build
 docker-compose run --service-ports web bash
 ```
 
-### Instalando Rails e Dependencias na Docker!
 
 * * Talvez voce precise de permisão especial utilize: "sudo chown -R $USER:$USER ."
 
 ```
 yarn install --check-files
-``` 
-
-```
-rails db:seed
 ```
 
 ```
