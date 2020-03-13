@@ -42,14 +42,7 @@ Deixo algumas features prontas para a evolução do projeto, exemplo é que capt
 * * Manual para instalação do webpack:  
 * * https://www.vic-l.com/setup-bootstrap-in-rails-6-with-webpacker-for-development-and-production/
 
-<<<<<<< HEAD
-
-### Para iniciar o Projeto usando Docker
-
-* Requisitos
-=======
 ### Docker Requisitos:
->>>>>>> docker
 
  - Docker
  - Editor
